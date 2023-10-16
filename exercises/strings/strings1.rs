@@ -1,17 +1,24 @@
-// strings1.rs
+// strings2.rs
 //
 // Make me compile without changing the function signature!
 //
-// Execute `rustlings hint strings1` or use the `hint` watch subcommand for a
+// Execute `rustlings hint strings2` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
+
+
+
 
 fn main() {
-    let answer = current_favorite_color();
-    println!("My current favorite color is {}", answer);
+
+    let word = String::from("green"); // Try not changing this line :)
+    if is_a_color_word(word.as_str()) {
+        println!("That is a color word I know!");
+    } else {
+        println!("That is not a color word I know.");
+    }
 }
 
-fn current_favorite_color() -> String {
-    "blue"
+fn is_a_color_word(attempt: &str) -> bool {
+    attempt == "green" || attempt == "blue" || attempt == "red"
 }
